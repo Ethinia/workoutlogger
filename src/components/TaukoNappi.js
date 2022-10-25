@@ -14,11 +14,13 @@ const TaukoNappi = () => {
 
     }
 
-    const breakToggle = () => {
+   /* const breakToggle = () => {
         startBreak();
         TaukoTimer();
 
     }
+    */
+
     const TaukoPaalle = () => {
 
         return(
