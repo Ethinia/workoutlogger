@@ -64,7 +64,7 @@ const Doingworkoutcard = () =>{
 
     return (
       <Card style={{ 
-        backgroundColor: "cyan",
+        backgroundColor: "grey",
         width: '32rem',
         height:'9.5rem' }}>
         <Card.Body>
