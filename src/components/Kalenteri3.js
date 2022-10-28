@@ -10,7 +10,7 @@ const [showTime, setShowTime] = useState(false)
 
  return (
  <div className='kalenteri3'>
-  
+  <br/>
    <div>
     <Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)}/>
    </div>
@@ -31,9 +31,9 @@ const [showTime, setShowTime] = useState(false)
    }
    <Time showTime={showTime} date={date}/>
 
-   <li className="nav-item" style={{marginLeft:10}}>
-						<Link to="/sivu2">Luo treeni</Link>
-					</li>
+
+						<Link to="/sivu2"><h1>Luo treeni</h1></Link>
+
 
  </div>
 
