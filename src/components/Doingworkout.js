@@ -1,7 +1,7 @@
 import Doingworkoutcard from "./Doingworkoutcard";
 import SaveWorkout from "./SaveWorkout";
-import TaukoNappi from "./TaukoNappi";
 import {Link} from 'react-router-dom';
+import Taukobutton from "./Taukobutton";
 
 const Doingworkout = () => {
     return(
@@ -13,8 +13,11 @@ const Doingworkout = () => {
         <br/>
         <Doingworkoutcard/>
         <br/>
-        <TaukoNappi/>
+
         <br/>
+
+        <Taukobutton/>
+
 
         <Link to="/WorkoutFinished"><SaveWorkout/></Link>
         </div>
