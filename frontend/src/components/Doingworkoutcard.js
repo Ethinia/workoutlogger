@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 import React from 'react';
 
 const Doingworkoutcard = () =>{
-    //const [date, useDate] = useState(new Date());
+    //const [date, setDate] = useState(new Date());
     //const [showTime, setShowTime] = useState(false) 
     
     let liikkeenNimi = "Penkki"
