@@ -45,7 +45,8 @@ const Taukobutton = () => {
     }
     
     //const MINUTE_MS = 10000; 
-     
+    
+    /*
     const TaukoAlert = () => {
         
         
@@ -59,7 +60,8 @@ const Taukobutton = () => {
             alert('I was clicked')
     
     }
-    
+    */
+
    /*
     useEffect(() => {
         const interval = setInterval(() => {
@@ -99,7 +101,7 @@ const Taukobutton = () => {
 */
     const breakToggle = () => {
         ResetTimer();
-        TaukoAlert();
+        //TaukoAlert();
         //BreakOver();
     }
     
