@@ -1,5 +1,5 @@
 const express = require("express");
-//const apiroute = require("./routes/apiroute");
+const apiroute = require("./routes/apiroute");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 const mongoose = require("mongoose");

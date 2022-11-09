@@ -6,7 +6,7 @@ const router = express.Router();
 //DATABASE
 
 
-router.get("/shopping",function(req,res) {
+router.get("/wolapp",function(req,res) {
 	let query = {"user":req.session.user}
 	liikeModel.find(query,function(err,items) {
 		if(err) {
@@ -17,7 +17,7 @@ router.get("/shopping",function(req,res) {
 	})
 });
 
-router.post("/shopping",function(req,res) {
+router.post("/wolapp",function(req,res) {
 	if(!req.body) {
 		return res.status(400).json({message:"Bad request"});
 	}
@@ -42,7 +42,7 @@ router.post("/shopping",function(req,res) {
 	})
 })
 
-router.delete("/shopping/:id",function(req,res) {
+router.delete("/wolapp/:id",function(req,res) {
 	liikeModel.deleteOne({"_id":req.params.id,"user":req.session.user}, function(err) {
 		if(err) {
 			console.log("Failed to remove item. Reason",err);
@@ -52,7 +52,7 @@ router.delete("/shopping/:id",function(req,res) {
 	})
 })
 
-router.put("/shopping/:id",function(req,res) {
+router.put("/wolapp/:id",function(req,res) {
 	if(!req.body) {
 		return res.status(400).json({message:"Bad request"});
 	}
