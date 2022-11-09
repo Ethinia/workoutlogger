@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Buttons from "./Buttons";
 import React from 'react';
 
-const Doingworkoutcard = (props) =>{
+const Doingworkoutcard = () =>{
     //const [date, setDate] = useState(new Date());
     //const [showTime, setShowTime] = useState(false) 
     
@@ -31,12 +31,11 @@ const Doingworkoutcard = (props) =>{
                 borderColor:'rgba(0,0,0,1)',
             }}
             >
-                {paivanyt}
-                
+            {paivanyt}
             </div>)
         }
 
-    const Penkki = () => {
+    const Liike = () => {
         return(
         <div 
             style={{
@@ -88,7 +87,7 @@ const Doingworkoutcard = (props) =>{
                     alignItems: 'left',
                     display: "flex"
                         }}>
-                    <Penkki/>
+                    <Liike/>
                     <SarjojenMaara/>
                     <SarjanPaino/>
                 </Card.Title>

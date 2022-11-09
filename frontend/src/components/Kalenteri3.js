@@ -3,7 +3,8 @@ import Calendar from 'react-calendar';
 import Time from './Time.js'
 import {Link} from 'react-router-dom';
 
-function Kalenteri3() {
+
+function Kalenteri3(props) {
  
 const [date, setDate] = useState(new Date());
 const [showTime, setShowTime] = useState(false) 
@@ -32,8 +33,7 @@ const [showTime, setShowTime] = useState(false)
    <Time showTime={showTime} date={date}/>
 
 
-						<Link to={{pathname:"/sivu2", state:date}}><h1>Luo treeni</h1></Link>
-
+                            <Link to="/sivu2"><h1>Luo treeni</h1></Link>
 
  </div>
 
