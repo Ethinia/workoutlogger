@@ -25,9 +25,7 @@ mongoose.connect("mongodb+srv://"+mongo_user+":"+mongo_password+"@"+mongo_url+"/
 
 mongoose.set("toJSON",{virtuals:true});
 
-app.listen(port);
-
-console.log("Running in port",port);
+//LOGIN DATABASES joskus
 
 //MIDDLEWARE
 
@@ -35,3 +33,9 @@ createToken = () => {
 	let token = crypto.randomBytes(64);
 	return token.toString("hex");
 }
+
+app.use("/api",apiroute);
+
+app.listen(port);
+
+console.log("Running in port",port);

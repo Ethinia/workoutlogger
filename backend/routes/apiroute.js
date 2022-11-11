@@ -7,13 +7,13 @@ const router = express.Router();
 
 
 router.get("/wolapp",function(req,res) {
-	let query = {"user":req.session.user}
-	liikeModel.find(query,function(err,items) {
+	let query = {}
+	liikeModel.find(query,function(err,liikkeet) {
 		if(err) {
-			console.log("Failed to find items. Reason",err);
+			console.log("Failed to find liikkeet. Reason",err);
 			return res.status(500).json({message:"Internal server error"})
 		}
-		return res.status(200).json(items);
+		return res.status(200).json(liikkeet);
 	})
 });
 
@@ -21,21 +21,21 @@ router.post("/wolapp",function(req,res) {
 	if(!req.body) {
 		return res.status(400).json({message:"Bad request"});
 	}
-	if(!req.body.type) {
+	if(!req.body.liikeID) {
 		return res.status(400).json({message:"Bad request"});
 	}
-	let item = new liikeModel({
+	let liike = new liikeModel({
 		liikeID:req.body.liikeID,
 		name:req.body.name,
 		date:req.body.date,
         weight:req.body.weight,
         sarjat:req.body.sarjat,
         toistot:req.body.toistot,
-		user:req.session.user
+		//user:req.session.user
 	})
-	item.save(function(err) {
+	liike.save(function(err) {
 		if(err) {
-			console.log("Failed to create item. Reason",err);
+			console.log("Failed to create liike. Reason",err);
 			return res.status(500).json({message:"Internal server error"})
 		}
 		return res.status(201).json({message:"Created"});
@@ -43,9 +43,9 @@ router.post("/wolapp",function(req,res) {
 })
 
 router.delete("/wolapp/:id",function(req,res) {
-	liikeModel.deleteOne({"_id":req.params.id,"user":req.session.user}, function(err) {
+	liikeModel.deleteOne({"_id":req.params.id}, function(err) {
 		if(err) {
-			console.log("Failed to remove item. Reason",err);
+			console.log("Failed to remove liike. Reason",err);
 			return res.status(500).json({message:"Internal server error"})
 		}
 		return res.status(200).json({message:"Success"});
@@ -56,21 +56,21 @@ router.put("/wolapp/:id",function(req,res) {
 	if(!req.body) {
 		return res.status(400).json({message:"Bad request"});
 	}
-	if(!req.body.type) {
+	if(!req.body.liikeID) {
 		return res.status(400).json({message:"Bad request"});
 	}
-	let item = {
+	let liike = {
 		liikeID:req.body.liikeID,
 		name:req.body.name,
 		date:req.body.date,
         weight:req.body.weight,
         sarjat:req.body.sarjat,
         toistot:req.body.toistot,
-		user:req.session.user
+		//user:req.session.user
 	}
-	liikeModel.replaceOne({"_id":req.params.id,"user":req.session.user},item,function(err) {
+	liikeModel.replaceOne({"_id":req.params.id},liike,function(err) {
 		if(err) {
-			console.log("Failed to update item. Reason",err);
+			console.log("Failed to update liike. Reason",err);
 			return res.status(500).json({message:"Internal server error"});
 		}
 		return res.status(200).json({message:"Success"});
