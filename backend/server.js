@@ -1,10 +1,10 @@
 const express = require("express");
 const apiroute = require("./routes/apiroute");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 const mongoose = require("mongoose");
-const userModel = require("./models/user");
-const sessionModel = require("./models/session");
+//const userModel = require("./models/user");
+//const sessionModel = require("./models/session");
 
 let app = express();
 
