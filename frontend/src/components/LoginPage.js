@@ -39,8 +39,7 @@ const LoginPage = () => {
             </form>
             </body>
 
-                <Link to="/Kalenteri3"><h2>Uusi treeni</h2></Link>
-
+                <Link to="/sivu2b"><h2>Uusi treeni</h2></Link>    
 
         </div>
         )

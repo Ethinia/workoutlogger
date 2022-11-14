@@ -1,15 +1,25 @@
-import {useState} from 'react';
 import useAction from '../hooks/useAction';
 import {Link} from 'react-router-dom';
+import React, {useState} from "react";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
 
 const Sivu2b = (props) => {
 
+	const [date, setDate] = useState(new Date());
+
+    const onChangeDate = date => {
+        setDate(date);
+	}
+	
+	const paiva = date.toString()
+	
 	const {add} = useAction();
 	
 	const [state,setState] = useState({
         liikeID:0,
         name:"",
-        date:"",
+        paiva:"",
         weight:0,
         sarjat:0,
         toistot:0
@@ -33,7 +43,7 @@ const Sivu2b = (props) => {
 		setState({
             liikeID:0,
             name:"",
-            date:"",
+            paiva:"",
             weight:0,
             sarjat:0,
             toistot:0
@@ -41,6 +51,12 @@ const Sivu2b = (props) => {
 	}
 	return(
 		<div style={{
+			margin:"auto"
+		}}>
+			<br/>
+			<Calendar showWeekNumbers onChange={onChangeDate} value={date}/>
+			<br/>
+			<body style={{
 			backgroundColor:"grey",
 			width:"500px",
 			margin:"auto"
@@ -63,12 +79,12 @@ const Sivu2b = (props) => {
 						value={state.name}
 						onChange={onChange}/>
 
-				<label htmlFor="date" className="form-label">Date</label>
+				<label htmlFor="paiva" className="form-label">Valitsit</label>
 				<input type="text"
-						name="date"
-						id="date"
+						name="paiva"
+						id="paiva"
 						className="form-control"
-						value={state.date}
+						value={paiva}
 						onChange={onChange}/>
 
 				<label htmlFor="weight" className="form-label">Weight</label>
@@ -99,6 +115,8 @@ const Sivu2b = (props) => {
 				<input type="submit" className="btn btn-primary" value="Add"/>
 			</form>
 			<Link to="/Doingworkout"><h1>Tee treeni</h1></Link>
+			<Link to="/Doingworkoutcard"><h1>Treenikortti</h1></Link>
+			</body>
 		</div>
 	)
 }

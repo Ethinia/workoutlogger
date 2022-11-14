@@ -2,14 +2,15 @@ import Card from 'react-bootstrap/Card';
 import Buttons from "./Buttons";
 import React from 'react';
 
-const Doingworkoutcard = () =>{
+
+const Doingworkoutcard = (props) =>{
     //const [date, setDate] = useState(new Date());
     //const [showTime, setShowTime] = useState(false) 
     
-    let liikkeenNimi = "Penkki"
+    //let liikkeenNimi = "Penkki"
     let sarjojenMaara = "5 Sarjaa"
     let sarjanPaino = "75 Kiloa "
-    let paivanyt = "19.10.2022"
+    //let paivanyt = "19.10.2022"
 
     /*
             näitä päivämäärä divin sisälle näyttään päivää
@@ -19,7 +20,7 @@ const Doingworkoutcard = () =>{
                 <Time showTime={showTime} date={date}/>
     */
 
-    const Paivamaara = () => {
+    const Paivamaara = (props) => {
         return(
         <div 
             style={{
@@ -31,11 +32,12 @@ const Doingworkoutcard = () =>{
                 borderColor:'rgba(0,0,0,1)',
             }}
             >
-            {paivanyt}
+            
+          
             </div>)
         }
 
-    const Liike = () => {
+    const Liike = (props) => {
         return(
         <div 
             style={{
@@ -44,7 +46,7 @@ const Doingworkoutcard = () =>{
                 borderColor:'rgba(0,0,0,1)',
             }}
             >
-                {liikkeenNimi}
+                {props.name}
             </div>)
         }
 

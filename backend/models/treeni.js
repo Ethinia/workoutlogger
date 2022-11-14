@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 let Schema = mongoose.Schema({
 	liike:Array,
-    date:String,
+    paiva:String,
 	weight:Number,
     sarjat:Number,
     toistot:Number,
