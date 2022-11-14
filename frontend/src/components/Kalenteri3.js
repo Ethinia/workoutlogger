@@ -33,7 +33,7 @@ const [showTime, setShowTime] = useState(false)
    <Time showTime={showTime} date={date}/>
 
 
-                            <Link to="/sivu2"><h1>Luo treeni</h1></Link>
+                            <Link to="/sivu2b"><h1>Luo treeni</h1></Link>
 
  </div>
 
