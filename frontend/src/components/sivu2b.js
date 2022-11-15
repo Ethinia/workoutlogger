@@ -1,19 +1,9 @@
 import useAction from '../hooks/useAction';
 import {Link} from 'react-router-dom';
 import React, {useState} from "react";
-import Calendar from "react-calendar";
-import 'react-calendar/dist/Calendar.css';
 
 const Sivu2b = (props) => {
 
-	const [date, setDate] = useState(new Date());
-
-    const onChangeDate = date => {
-        setDate(date);
-	}
-	
-	const paiva = date.toString()
-	
 	const {add} = useAction();
 	
 	const [state,setState] = useState({
@@ -54,8 +44,6 @@ const Sivu2b = (props) => {
 			margin:"auto"
 		}}>
 			<br/>
-			<Calendar showWeekNumbers onChange={onChangeDate} value={date}/>
-			<br/>
 			<body style={{
 			backgroundColor:"grey",
 			width:"500px",
@@ -79,13 +67,14 @@ const Sivu2b = (props) => {
 						value={state.name}
 						onChange={onChange}/>
 
-				<label htmlFor="paiva" className="form-label">Valitsit</label>
-				<input type="text"
+				<label htmlFor="paiva" className="form-label">paiva</label>
+				<input type="date"
 						name="paiva"
 						id="paiva"
 						className="form-control"
-						value={paiva}
-						onChange={onChange}/>
+						value={state.paiva}
+						onChange={onChange}
+						/>
 
 				<label htmlFor="weight" className="form-label">Weight</label>
 				<input type="number"
@@ -96,7 +85,7 @@ const Sivu2b = (props) => {
 						value={state.weight}
 						onChange={onChange}/>
 
-				<label htmlFor="sarjat" className="form-label">Sarjat</label>
+				<label htmlFor="sarjat" className="form-label">Number of sets</label>
 				<input type="number"
 						name="sarjat"
 						id="sarjat"
@@ -104,7 +93,7 @@ const Sivu2b = (props) => {
 						value={state.sarjat}
 						onChange={onChange}/>
 
-                <label htmlFor="toistot" className="form-label">Toistot</label>
+                <label htmlFor="toistot" className="form-label">Number of reps</label>
 				<input type="number"
 						name="toistot"
 						id="toistot"
