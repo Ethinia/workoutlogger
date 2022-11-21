@@ -1,24 +1,13 @@
 import Card from 'react-bootstrap/Card';
 import Buttons from "./Buttons";
 import React from 'react';
-
-
+// Tällä hetkellä vanha kortti jota ei enään käytetä. Katso UusiKortti.js
 const Doingworkoutcard = (props) =>{
-    //const [date, setDate] = useState(new Date());
-    //const [showTime, setShowTime] = useState(false) 
-    
-    //let liikkeenNimi = "Penkki"
+
+    let liikkeenNimi = "Penkki"
     let sarjojenMaara = "5 Sarjaa"
     let sarjanPaino = "75 Kiloa "
-    //let paivanyt = "19.10.2022"
-
-    /*
-            näitä päivämäärä divin sisälle näyttään päivää
-
-                {props.date}
-                <h3>{date.toDateString()} systeemi kello</h3>
-                <Time showTime={showTime} date={date}/>
-    */
+    let paivanyt = "19.10.2022"
 
     const Paivamaara = (props) => {
         return(
@@ -32,8 +21,7 @@ const Doingworkoutcard = (props) =>{
                 borderColor:'rgba(0,0,0,1)',
             }}
             >
-            
-          
+            {paivanyt}
             </div>)
         }
 
@@ -46,7 +34,7 @@ const Doingworkoutcard = (props) =>{
                 borderColor:'rgba(0,0,0,1)',
             }}
             >
-                {props.name}
+                {liikkeenNimi}
             </div>)
         }
 
@@ -89,15 +77,17 @@ const Doingworkoutcard = (props) =>{
                     alignItems: 'left',
                     display: "flex"
                         }}>
-                    <Liike/>
+                    <Liike/>                     
                     <SarjojenMaara/>
                     <SarjanPaino/>
                 </Card.Title>
                     <Card.Text>
                         <Buttons/>
                     </Card.Text>
+                    
         </Card.Body>
       </Card>
+      
     );
   }
 
