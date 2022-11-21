@@ -60,8 +60,8 @@ const TeeTreeniTesti = (props) => {
 		<table className="table table-striped">
 			<thead>
 				<tr>
-					<th>LiikeID</th>
-					<th>Name</th>
+					
+					<th>Movement</th>
 					<th>Date</th>
 					<th>Weight</th>
 					<th>Sets</th>
