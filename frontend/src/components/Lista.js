@@ -2,7 +2,7 @@ const Lista = (props) => {
 	
 	return(
         <tr>
-			<td>{props.item.liikeID}</td>
+			
 			<td>{props.item.name}</td>
 			<td>{props.item.paiva}</td>
             <td>{props.item.weight}</td>

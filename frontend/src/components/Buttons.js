@@ -6,8 +6,6 @@ import Nappi from './Nappi';
 
 const Buttons = (props) => {
     //let setAmount = 5;
-    //let setAmount = 0;
-    //let setAmount = props.children
     let setAmount = props.item
 // CONDITIONAL RENDERING
 
