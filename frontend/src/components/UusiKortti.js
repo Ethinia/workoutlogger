@@ -45,7 +45,7 @@ return (
                       }}>{props.item.toistot} Reps</td>
               </Card.Title>
                   <Card.Text>
-                      <Buttons/>
+                      <Buttons item = {props.item.sarjat}/>
                   </Card.Text>
                   
       </Card.Body>

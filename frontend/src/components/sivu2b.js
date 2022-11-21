@@ -107,7 +107,6 @@ const Sivu2b = (props) => {
 			<Link to="/Doingworkoutcard"><h1>Treenikortti</h1></Link>
 			<Link to="/TeeTreeniTesti"><h1>Treeni testi</h1></Link>
 			<Link to="/Lista"><h1>Lista</h1></Link>
-			<Link to="/UusiKortti"><h1>Uusikortti</h1></Link>
 			</body>
 		</div>
 	)

@@ -10,10 +10,21 @@ import Doingworkoutcard from './components/Doingworkoutcard';
 import TeeTreeniTesti from './components/TeeTreeniTesti';
 import Lista from './components/Lista';
 import UusiKortti from './components/UusiKortti';
+import {useEffect} from 'react';
+import useAction from './hooks/useAction';
 
 //import useAppState from './hooks/useAppState';
 
 function App() {
+
+  const {getList} = useAction();
+
+	useEffect(() => {
+		
+			getList();
+		
+	},[])
+
 /*
   // Loading and error zone.
 

@@ -15,7 +15,7 @@ const PageNavbar = () => {
 				</li>
 
 				<li className="nav-item" style={{marginLeft:10}}>
-					<Link to="/Historia"><h2>Historia</h2></Link>
+					<Link to="/TeeTreeniTesti"><h2>Historia</h2></Link>
 				</li>
 
 			</ul>		

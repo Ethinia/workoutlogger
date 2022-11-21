@@ -4,9 +4,11 @@ import Nappi from './Nappi';
 
 //Ratkasu et vain yksi nappi toimii togglella oli et Nappi.js piti tehdä omana komponenttina ja importata tänne conditional renderöintiin omanaan.
 
-const Buttons = () => {
-    let setAmount = 5;
-
+const Buttons = (props) => {
+    //let setAmount = 5;
+    //let setAmount = 0;
+    //let setAmount = props.children
+    let setAmount = props.item
 // CONDITIONAL RENDERING
 
 let tempRender = <h2>Input error in amount of sets. Give a value between 1-5</h2>
