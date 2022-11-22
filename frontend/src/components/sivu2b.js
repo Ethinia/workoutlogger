@@ -1,6 +1,6 @@
-import {useState} from 'react';
 import useAction from '../hooks/useAction';
 import {Link} from 'react-router-dom';
+import React, {useState} from "react";
 
 const Sivu2b = (props) => {
 
@@ -9,7 +9,7 @@ const Sivu2b = (props) => {
 	const [state,setState] = useState({
         liikeID:0,
         name:"",
-        date:"",
+        paiva:"",
         weight:0,
         sarjat:0,
         toistot:0
@@ -33,7 +33,7 @@ const Sivu2b = (props) => {
 		setState({
             liikeID:0,
             name:"",
-            date:"",
+            paiva:"",
             weight:0,
             sarjat:0,
             toistot:0
@@ -41,6 +41,10 @@ const Sivu2b = (props) => {
 	}
 	return(
 		<div style={{
+			margin:"auto"
+		}}>
+			<br/>
+			<body style={{
 			backgroundColor:"grey",
 			width:"500px",
 			margin:"auto"
@@ -63,24 +67,25 @@ const Sivu2b = (props) => {
 						value={state.name}
 						onChange={onChange}/>
 
-				<label htmlFor="date" className="form-label">Date</label>
-				<input type="text"
-						name="date"
-						id="date"
+				<label htmlFor="paiva" className="form-label">paiva</label>
+				<input type="date"
+						name="paiva"
+						id="paiva"
 						className="form-control"
-						value={state.date}
-						onChange={onChange}/>
+						value={state.paiva}
+						onChange={onChange}
+						/>
 
 				<label htmlFor="weight" className="form-label">Weight</label>
 				<input type="number"
 						name="weight"
 						id="weigth"
 						className="form-control"
-						step="0.01"
+						step="0.25"
 						value={state.weight}
 						onChange={onChange}/>
 
-				<label htmlFor="sarjat" className="form-label">Sarjat</label>
+				<label htmlFor="sarjat" className="form-label">Number of sets</label>
 				<input type="number"
 						name="sarjat"
 						id="sarjat"
@@ -88,7 +93,7 @@ const Sivu2b = (props) => {
 						value={state.sarjat}
 						onChange={onChange}/>
 
-                <label htmlFor="toistot" className="form-label">Toistot</label>
+                <label htmlFor="toistot" className="form-label">Number of reps</label>
 				<input type="number"
 						name="toistot"
 						id="toistot"
@@ -99,6 +104,9 @@ const Sivu2b = (props) => {
 				<input type="submit" className="btn btn-primary" value="Add"/>
 			</form>
 			<Link to="/Doingworkout"><h1>Tee treeni</h1></Link>
+			<Link to="/Doingworkoutcard"><h1>Treenikortti</h1></Link>
+			<Link to="/TeeTreeniTesti"><h1>Treeni testi</h1></Link>
+			</body>
 		</div>
 	)
 }

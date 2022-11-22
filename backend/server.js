@@ -14,9 +14,9 @@ let port = process.env.PORT || 3001;
 
 //MONGOOSE CONNECTION
 
-const mongo_user = process.env.MONGODB_USERNAME;
-const mongo_password = process.env.MONGODB_PASSWORD;
-const mongo_url = process.env.MONGODB_URL;
+const mongo_user = "WORKOUT";
+const mongo_password = "WORKOUTLOGGER";
+const mongo_url = "workoutlogger.vzhxnzs.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect("mongodb+srv://"+mongo_user+":"+mongo_password+"@"+mongo_url+"/shoppingdatabase?retryWrites=true&w=majority").then(
 	() => console.log("Connected to mongodb"),

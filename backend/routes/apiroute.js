@@ -27,7 +27,7 @@ router.post("/wolapp",function(req,res) {
 	let liike = new liikeModel({
 		liikeID:req.body.liikeID,
 		name:req.body.name,
-		date:req.body.date,
+		paiva:req.body.paiva,
         weight:req.body.weight,
         sarjat:req.body.sarjat,
         toistot:req.body.toistot,
@@ -62,7 +62,7 @@ router.put("/wolapp/:id",function(req,res) {
 	let liike = {
 		liikeID:req.body.liikeID,
 		name:req.body.name,
-		date:req.body.date,
+		paiva:req.body.paiva,
         weight:req.body.weight,
         sarjat:req.body.sarjat,
         toistot:req.body.toistot,
