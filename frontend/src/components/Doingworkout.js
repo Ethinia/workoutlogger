@@ -4,26 +4,11 @@ import {Link} from 'react-router-dom';
 import Taukobutton from "./Taukobutton";
 import useAppState from '../hooks/useAppState';
 import UusiKortti from "./UusiKortti";
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";
->>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 
 const Doingworkout = (props) => {
     
     const {list} = useAppState();
-<<<<<<< HEAD
-    
-    let items = list.map((item) => {
-
-		return (
-        <div>
-        <UusiKortti key={item.id} item={item}/>
-        <br/>
-        </div>
-        )
-	})
-=======
 
     const [state,setState] = useState({
 		treenipaiva:""
@@ -45,7 +30,6 @@ const Doingworkout = (props) => {
 		return <UusiKortti key={item.id} item={item}/>
 	})
 	
->>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
     
     return(
         <div>
