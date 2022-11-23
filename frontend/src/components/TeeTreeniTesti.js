@@ -1,15 +1,14 @@
-//import {useState} from 'react';
-//import useAction from '../hooks/useAction';
+import {useState} from 'react';
+import useAction from '../hooks/useAction';
 import useAppState from '../hooks/useAppState';
-//import Doingworkout from './Doingworkout';
 import Lista from './Lista';
+import RemoveLista from './RemoveLista';
+import EditLista from './EditLista';
 
 const TeeTreeniTesti = (props) => {
 
-    
 	const {list} = useAppState();
 
-    /*
 	const {remove,edit} = useAction();
 	
 	const [state,setState] = useState({
@@ -49,11 +48,14 @@ const TeeTreeniTesti = (props) => {
 		changeMode("cancel");
 	}
 	
-    */
-
-	let items = list.map((item) => {
-
-		return <Lista key={item.id} item={item}/>
+	let items = list.map((item,index) => {
+		if(state.editIndex === index) {
+			return <EditLista key={item.id} item={item} editItem={editItem} changeMode={changeMode}/>
+		}		
+		if(state.removeIndex === index) {
+			return <RemoveLista key={item.id} item={item} changeMode={changeMode} removeItem={removeItem}/>
+		}
+		return <Lista key={item.id} item={item} index={index} changeMode={changeMode}/>
 	})
 	
 	return(
