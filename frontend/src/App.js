@@ -12,6 +12,7 @@ import Lista from './components/Lista';
 import UusiKortti from './components/UusiKortti';
 import {useEffect} from 'react';
 import useAction from './hooks/useAction';
+import TeeTreeniHaku from './components/TeeTreeniHaku';
 
 //import useAppState from './hooks/useAppState';
 
@@ -62,6 +63,7 @@ function App() {
               <Route path="/TeeTreeniTesti" element={<TeeTreeniTesti/>}/>
               <Route path="/Lista" element={<Lista/>}/>
               <Route path="/UusiKortti" element={<UusiKortti/>}/>
+              <Route path="/TeeTreeniHaku" element={<TeeTreeniHaku/>}/>
 					</Routes>
         </body>
     </div>
