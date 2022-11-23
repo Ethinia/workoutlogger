@@ -42,7 +42,7 @@ const useAction = () => {
                         }
                         action.dispatch({
                             type:ActionConstants.FETCH_LIST_SUCCESS,
-                            list:list
+                            list:list,
                         })
                         return;
                     case "add":
@@ -105,7 +105,7 @@ const useAction = () => {
         }
 
         contactBackend();
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[state])
 
     //Action generators for components

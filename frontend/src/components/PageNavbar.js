@@ -16,6 +16,13 @@ const PageNavbar = () => {
 
 				<li className="nav-item" style={{marginLeft:10}}>
 					<Link to="/TeeTreeniTesti"><h2>Historia</h2></Link>
+<<<<<<< HEAD
+=======
+				</li>
+
+				<li className="nav-item" style={{marginLeft:10}}>
+					<Link to="/TeeTreeniHaku"><h2>Haku</h2></Link>
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 				</li>
 
 			</ul>		

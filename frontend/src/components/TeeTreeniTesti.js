@@ -16,6 +16,10 @@ const TeeTreeniTesti = (props) => {
 		removeIndex:-1,
 		editIndex:-1
 	})
+<<<<<<< HEAD
+=======
+
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 	
 	const changeMode = (mode,index) => {
 		if(mode === "remove") {
@@ -59,8 +63,13 @@ const TeeTreeniTesti = (props) => {
 		<table className="table table-striped">
 			<thead>
 				<tr>
+<<<<<<< HEAD
 					<th>LiikeID</th>
 					<th>Name</th>
+=======
+					
+					<th>Movement</th>
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 					<th>Date</th>
 					<th>Weight</th>
 					<th>Sets</th>

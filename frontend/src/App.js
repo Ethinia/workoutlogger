@@ -12,6 +12,10 @@ import Lista from './components/Lista';
 import UusiKortti from './components/UusiKortti';
 import {useEffect} from 'react';
 import useAction from './hooks/useAction';
+<<<<<<< HEAD
+=======
+import TeeTreeniHaku from './components/TeeTreeniHaku';
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 
 //import useAppState from './hooks/useAppState';
 
@@ -22,7 +26,11 @@ function App() {
 	useEffect(() => {
 		
 			getList();
+<<<<<<< HEAD
 		
+=======
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 	},[])
 
 /*
@@ -60,6 +68,10 @@ function App() {
               <Route path="/TeeTreeniTesti" element={<TeeTreeniTesti/>}/>
               <Route path="/Lista" element={<Lista/>}/>
               <Route path="/UusiKortti" element={<UusiKortti/>}/>
+<<<<<<< HEAD
+=======
+              <Route path="/TeeTreeniHaku" element={<TeeTreeniHaku/>}/>
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 					</Routes>
         </body>
     </div>

@@ -2,7 +2,11 @@ const Lista = (props) => {
 	
 	return(
         <tr>
+<<<<<<< HEAD
 			<td>{props.item.liikeID}</td>
+=======
+			
+>>>>>>> eecac03f7c2afbdf0147f73e61ddbedf5e11e664
 			<td>{props.item.name}</td>
 			<td>{props.item.paiva}</td>
             <td>{props.item.weight}</td>
