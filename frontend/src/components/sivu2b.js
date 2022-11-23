@@ -14,19 +14,7 @@ const Sivu2b = (props) => {
         sarjat:0,
         toistot:0
 	})
-	/*
-	const Pena = () => {
-		state.name="Penkki", 
-		state.liikeID=1
-	}
 	
-	const readLiike = () => {
-		var e = document.getElementById("Liike");
-		feedArray = e.value.split(",");
-		setState.liikeID(feedArray[0]);
-		setState.name(feedArray[1]);
-	}
-	*/
 	const onChange = (event) => {
 		setState((state) => {
 			return {
