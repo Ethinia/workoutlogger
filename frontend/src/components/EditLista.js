@@ -38,7 +38,6 @@ const EditLista = (props) => {
 						value={state.name}
 						onChange={onChange}/></td>
 
-
 				<td><input type="date"
 						name="paiva"
 						id="paiva"
@@ -54,14 +53,12 @@ const EditLista = (props) => {
 						value={state.weight}
 						onChange={onChange}/></td>
 
-
 				<td><input type="number"
 						name="sarjat"
 						id="sarjat"
 						className="form-control"
 						value={state.sarjat}
 						onChange={onChange}/></td>
-
 
 				<td><input type="number"
 						name="toistot"

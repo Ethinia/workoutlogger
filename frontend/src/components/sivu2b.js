@@ -60,6 +60,7 @@ const Sivu2b = (props) => {
 			
 				<label htmlFor="name" className="form-label">Valitse Liike</label>
 				<select name="name" id="name" value={state.name} onChange={onChange}>
+						<option>Push</option>
 						<option>Penkkipunnerrus</option>
 						<option>Vinopenkki</option>
 						<option>Dippi</option>
@@ -68,6 +69,7 @@ const Sivu2b = (props) => {
 						<option>Ranskalainen punnerrus</option>
 					</select>
 					<select name="name" id="name" value={state.name} onChange={onChange}>
+						<option>Pull</option>
 						<option>Maastaveto</option>
 						<option>Leuanveto</option>
 						<option>Kulmasoutu</option>
@@ -76,6 +78,7 @@ const Sivu2b = (props) => {
 						<option>HammerCurl</option>
 					</select>
 					<select name="name" id="name" value={state.name} onChange={onChange}>
+						<option>Legs</option>
 						<option>Takakyykky</option>
 						<option>Etukyykky</option>
 						<option>Hyvää huomenta</option>
@@ -127,8 +130,6 @@ const Sivu2b = (props) => {
 				<input type="submit" className="btn btn-primary" value="Add"/>
 			</form>
 			<Link to="/Doingworkout"><h1>Tee treeni</h1></Link>
-			<Link to="/Doingworkoutcard"><h1>Treenikortti</h1></Link>
-			<Link to="/TeeTreeniTesti"><h1>Treeni testi</h1></Link>
 			</body>
 		</div>
 	)
