@@ -1,26 +1,14 @@
-//import {useState} from 'react';
-//import useAction from '../hooks/useAction';
+import {useState} from 'react';
+import useAction from '../hooks/useAction';
 import useAppState from '../hooks/useAppState';
-//import Doingworkout from './Doingworkout';
 import Lista from './Lista';
-//import {useEffect} from 'react';
-import React, {useState} from "react";
+import RemoveLista from './RemoveLista';
+import EditLista from './EditLista';
 
 const TeeTreeniHaku = (props) => {
-    const {list} = useAppState();
 
+	const {list} = useAppState();
 
-    /*
-    const {getTreeni} = useAction();
-	
-    useEffect(() => {
-		
-        getTreeni();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-},[])
-*/
-
-    /*
 	const {remove,edit} = useAction();
 	
 	const [state,setState] = useState({
@@ -60,14 +48,12 @@ const TeeTreeniHaku = (props) => {
 		changeMode("cancel");
 	}
 	
-    */
-
-	const [state,setState] = useState({
+	const [haku,setHaku] = useState({
 		treenipaiva:""
 	})
 
 	const onChange = (event) => {
-		setState((state) => {
+		setHaku((state) => {
 			return {
 				...state,
 				[event.target.name]:event.target.value
@@ -75,20 +61,15 @@ const TeeTreeniHaku = (props) => {
 		})
 	}
 
-	//let treenipaiva = "2022-11-09"
-
-	let items = list.filter(treeni => treeni.paiva === state.treenipaiva ).map((item) => {
-
-		return <Lista key={item.id} item={item}/>
+	let items = list.filter(treeni => treeni.paiva === haku.treenipaiva ).map((item,index) => {
+		if(state.editIndex === index) {
+			return <EditLista key={item.id} item={item} editItem={editItem} changeMode={changeMode}/>
+		}		
+		if(state.removeIndex === index) {
+			return <RemoveLista key={item.id} item={item} changeMode={changeMode} removeItem={removeItem}/>
+		}
+		return <Lista key={item.id} item={item} index={index} changeMode={changeMode}/>
 	})
-	
-
-	/*
-	let items = list.map((item) => {
-
-		return <Lista key={item.id} item={item}/>
-	})
-	*/
 	
 	return(
 		<div>
@@ -104,7 +85,7 @@ const TeeTreeniHaku = (props) => {
 						name="treenipaiva"
 						id="treenipaiva"
 						className="form-control"
-						value={state.treenipaiva}
+						value={haku.treenipaiva}
 						onChange={onChange}
 						/>
 			
