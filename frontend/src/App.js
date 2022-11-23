@@ -6,7 +6,6 @@ import Doingworkout from './components/Doingworkout';
 import LoginPage from './components/LoginPage';
 import WorkoutFinished from './components/WorkoutFinished';
 import Sivu2b from './components/sivu2b';
-import Doingworkoutcard from './components/Doingworkoutcard';
 import TeeTreeniTesti from './components/TeeTreeniTesti';
 import Lista from './components/Lista';
 import UusiKortti from './components/UusiKortti';
@@ -59,7 +58,6 @@ function App() {
               <Route path="/Sivu2b" element={<Sivu2b/>}/>
               <Route path="/Doingworkout" element={<Doingworkout/>}/>
               <Route path="/WorkoutFinished" element={<WorkoutFinished/>}/>
-              <Route path="/Doingworkoutcard" element={<Doingworkoutcard/>}/>
               <Route path="/TeeTreeniTesti" element={<TeeTreeniTesti/>}/>
               <Route path="/Lista" element={<Lista/>}/>
               <Route path="/UusiKortti" element={<UusiKortti/>}/>

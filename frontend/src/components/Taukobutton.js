@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 //import TaukoAlert from './TaukoAlert';
 
-
 const Taukobutton = () => {
 
     let [state,setState] = useState({
@@ -20,7 +19,6 @@ const Taukobutton = () => {
         })
     }
 
-    
     useEffect(() => {
         let interval = setInterval(startTimer,1000);
         setState((state) => {
@@ -32,8 +30,6 @@ const Taukobutton = () => {
         
         return () => clearInterval(interval);
     },[]);
-
-
 
     const ResetTimer = () => {
         setState((state) => {
@@ -105,13 +101,8 @@ const Taukobutton = () => {
         //BreakOver();
     }
     
-    
-
-
-
     return(
         <div>
-
         <Button 
         onClick={breakToggle}
         variant="primary"
@@ -123,13 +114,7 @@ const Taukobutton = () => {
         }}
         ><h1>Break button {state.seconds}</h1></Button>
         </div>
-        
     )
-    
 }
-
-
-
-
 
 export default Taukobutton;

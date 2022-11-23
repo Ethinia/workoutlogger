@@ -73,7 +73,6 @@ const TeeTreeniHaku = (props) => {
 	
 	return(
 		<div>
-	
 			<form className="mb-3"
 			style={{
 				backgroundColor:"grey",
@@ -86,9 +85,7 @@ const TeeTreeniHaku = (props) => {
 						id="treenipaiva"
 						className="form-control"
 						value={haku.treenipaiva}
-						onChange={onChange}
-						/>
-			
+						onChange={onChange}/>
 			</form>
 
 			<table className="table table-striped"

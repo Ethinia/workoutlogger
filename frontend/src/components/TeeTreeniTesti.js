@@ -16,7 +16,6 @@ const TeeTreeniTesti = (props) => {
 		editIndex:-1
 	})
 
-	
 	const changeMode = (mode,index) => {
 		if(mode === "remove") {
 			setState({

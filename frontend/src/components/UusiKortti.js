@@ -2,7 +2,6 @@ import Card from 'react-bootstrap/Card';
 import Buttons from "./Buttons";
 import React from 'react';
 
-
 const UusiKortti = (props) =>{
 
 return (

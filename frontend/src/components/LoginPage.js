@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+
 
 const LoginPage = () => {
     return(
@@ -38,9 +38,6 @@ const LoginPage = () => {
                 <button className="btn btn-warning" name="register">Register</button>
             </form>
             </body>
-
-                <Link to="/sivu2b"><h2>Uusi treeni</h2></Link>    
-
         </div>
         )
 }

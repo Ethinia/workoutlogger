@@ -1,4 +1,3 @@
-//import Doingworkoutcard from "./Doingworkoutcard";
 import SaveWorkout from "./SaveWorkout";
 import {Link} from 'react-router-dom';
 import Taukobutton from "./Taukobutton";
@@ -23,14 +22,16 @@ const Doingworkout = (props) => {
 		})
 	}
 
-	//let treenipaiva = "2022-11-09"
-
 	let items = list.filter(treeni => treeni.paiva === state.treenipaiva ).map((item) => {
 
-		return <UusiKortti key={item.id} item={item}/>
+		return (
+		<div>
+		<UusiKortti key={item.id} item={item}/>
+			<br/>
+		</div>
+		)
 	})
 	
-    
     return(
         <div>
             <form className="mb-3"
@@ -52,18 +53,11 @@ const Doingworkout = (props) => {
         <br/>
         {items}
         <br/>
-        
+        <br/>    
         <br/>
-        
-        <br/>
-        
-        <br/>
-
         <Taukobutton/>
 
-
         <Link to="/WorkoutFinished"><SaveWorkout/></Link>
-        
         
         </div>
     )

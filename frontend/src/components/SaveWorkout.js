@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import React from 'react';
 
-
 const SaveWorkout = () => {
     let teksti = "Save workout"
     return(
@@ -12,10 +11,7 @@ const SaveWorkout = () => {
             borderRadius:50,
             borderColor:'rgba(0,0,0,1)',
         }}
-        >{teksti}</Button>)
-        
-
-        
+        >{teksti}</Button>)            
 }
 
 export default SaveWorkout;
