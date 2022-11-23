@@ -18,6 +18,10 @@ const PageNavbar = () => {
 					<Link to="/TeeTreeniTesti"><h2>Historia</h2></Link>
 				</li>
 
+				<li className="nav-item" style={{marginLeft:10}}>
+					<Link to="/TeeTreeniHaku"><h2>Haku</h2></Link>
+				</li>
+
 			</ul>		
 		</Navbar>
 	)
