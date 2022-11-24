@@ -4,40 +4,38 @@ const LoginPage = () => {
     return(
         <div>
 
-                <body style={{
+                <div style={{
             "width":"400px",
             "margin":"auto"
         }}>
                 <h4>Welcome to the workoutlogger. Please login or register as a new user</h4>
                 <br/>
-                </body>
+                </div>
 
-            <body  style={{
+            <div  style={{
             "width":"400px",
             "backgroundColor":"grey",
             "margin":"auto"
         }}>
             <form className="mb-3">
                 <label htmlFor="username" className="form-label">Username</label>
-                <input type="text"
+                <input readOnly type="text"
                         placeholder="MattiMeikalainen"
                         name="username"
                         id="username"
-                        className="form-control"
-                        onChange=""
-                        value=""/>
+                        className="form-control"/>
+
                 <label htmlFor="password" className="form-label">Password</label>
-                <input type="password"
+                <input readOnly type="password"
                         placeholder="Salasana123"
                         name="password"
                         id="password"
-                        className="form-control"
-                        onChange=""
-                        value=""/>			
-                <button className="btn btn-primary" name="login">Login</button>
-                <button className="btn btn-warning" name="register">Register</button>
+                        className="form-control"/>	
+
+                <button disabled className="btn btn-primary" name="login">Login</button>
+                <button disabled className="btn btn-warning" name="register">Register</button>
             </form>
-            </body>
+            </div>
         </div>
         )
 }
