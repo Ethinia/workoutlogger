@@ -23,6 +23,16 @@ const Sivu2b = (props) => {
 			}
 		})
 	}
+
+	const onChange2 = (event) => {
+		setState((state) => {
+			return {
+				...state,
+				[event.target.name]:event.target.value,
+				liikeID:5
+			}
+		})
+	}
 	
 	const onSubmit = (event) => {
 		event.preventDefault();
@@ -44,14 +54,14 @@ const Sivu2b = (props) => {
 			margin:"auto"
 		}}>
 			<br/>
-			<body style={{
+			<div style={{
 			backgroundColor:"grey",
 			width:"500px",
 			margin:"auto"
 		}}>
 			<form onSubmit={onSubmit} className="mb-3">
-			<label htmlFor="liikeID" className="form-label">liikeID</label>
-				<input type="number"
+			<label hidden htmlFor="liikeID" className="form-label">liikeID</label>
+				<input hidden type="number"
 						name="liikeID"
 						id="liikeID"
 						className="form-control"
@@ -59,7 +69,8 @@ const Sivu2b = (props) => {
 						onChange={onChange}/>
 			
 				<label htmlFor="name" className="form-label">Valitse Liike</label>
-				<select name="name" id="name" value={state.name} onChange={onChange}>
+				<br/>
+				<select name="name" id="name" value={state.name} onChange={onChange2}>
 						<option>Push</option>
 						<option>Penkkipunnerrus</option>
 						<option>Vinopenkki</option>
@@ -68,7 +79,7 @@ const Sivu2b = (props) => {
 						<option>Vipunosto sivulle</option>
 						<option>Ranskalainen punnerrus</option>
 					</select>
-					<select name="name" id="name" value={state.name} onChange={onChange}>
+					<select name="name" id="name" value={state.name} onChange={onChange2}>
 						<option>Pull</option>
 						<option>Maastaveto</option>
 						<option>Leuanveto</option>
@@ -77,7 +88,7 @@ const Sivu2b = (props) => {
 						<option>Hauiskääntö</option>
 						<option>HammerCurl</option>
 					</select>
-					<select name="name" id="name" value={state.name} onChange={onChange}>
+					<select name="name" id="name" value={state.name} onChange={onChange2}>
 						<option>Legs</option>
 						<option>Takakyykky</option>
 						<option>Etukyykky</option>
@@ -91,7 +102,7 @@ const Sivu2b = (props) => {
 						id="name"
 						className="form-control"
 						value={state.name}
-						onChange={onChange}/>
+						onChange={onChange2}/>
 
 				<label htmlFor="paiva" className="form-label">paiva</label>
 				<input type="date"
@@ -130,7 +141,7 @@ const Sivu2b = (props) => {
 				<input type="submit" className="btn btn-primary" value="Add"/>
 			</form>
 			<Link to="/Doingworkout"><h1>Tee treeni</h1></Link>
-			</body>
+			</div>
 		</div>
 	)
 }
