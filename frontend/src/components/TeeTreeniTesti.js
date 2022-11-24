@@ -58,7 +58,11 @@ const TeeTreeniTesti = (props) => {
 	})
 	
 	return(
-		<table className="table table-striped">
+		<table style={{
+			margin:"auto",
+			width:"80vw"
+		}}
+		className="table table-striped">
 			<thead>
 				<tr>
 					
