@@ -77,7 +77,8 @@ const TeeTreeniHaku = (props) => {
 			style={{
 				backgroundColor:"grey",
 				width:"500px",
-				margin:"auto"
+				margin:"auto",
+				
 			}}>
 			<label htmlFor="treenipaiva" className="form-label">Pick a date to search for your workouts</label>
 				<input type="date"
@@ -88,11 +89,13 @@ const TeeTreeniHaku = (props) => {
 						onChange={onChange}/>
 			</form>
 
-			<table className="table table-striped"
+			<table 
+			className="table table-striped"
 			style={{
-				"width":"1200px",
-				"margin":"auto"
-			}}>
+				margin:"auto",
+				width:"80vw"
+			}}
+			>
 				<thead>
 					<tr>
 						
