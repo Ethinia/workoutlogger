@@ -43,7 +43,7 @@ function App() {
 >
         <Navbar/>
        
-        <body    
+        <div    
             style={{ 
           //marginLeft: 150,
           display: "flex",
@@ -63,7 +63,7 @@ function App() {
               <Route path="/UusiKortti" element={<UusiKortti/>}/>
               <Route path="/TeeTreeniHaku" element={<TeeTreeniHaku/>}/>
 					</Routes>
-        </body>
+        </div>
     </div>
   );
 }
