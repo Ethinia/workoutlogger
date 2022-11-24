@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: rgb(151, 151, 241)
+}
