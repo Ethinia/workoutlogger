@@ -48,7 +48,7 @@ router.delete("/wolapp/:id",function(req,res) {
 			console.log("Failed to remove liike. Reason",err);
 			return res.status(500).json({message:"Internal server error"})
 		}
-		return res.status(200).json({message:"Success"});
+		return res.status(200).json({message:"Successfully deleted item."});
 	})
 })
 
@@ -73,7 +73,7 @@ router.put("/wolapp/:id",function(req,res) {
 			console.log("Failed to update liike. Reason",err);
 			return res.status(500).json({message:"Internal server error"});
 		}
-		return res.status(200).json({message:"Success"});
+		return res.status(200).json({message:"Successfully edited item."});
 	})
 })
 
