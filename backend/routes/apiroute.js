@@ -4,7 +4,7 @@ const liikeModel = require("../models/liike");
 const router = express.Router();
 
 //DATABASE
-// mietippä tännekki tarkempia get requesteja yms.
+// mietippä tännekki tarkempia get requesteja
 
 router.get("/wolapp", function (req, res) {
   let query = {};
